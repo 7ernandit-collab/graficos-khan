@@ -1,5 +1,5 @@
 # graficos-khan
-# Despliegue de Gráficos – Khan Academy → Código Nativo
+## Despliegue de Gráficos – Khan Academy → Código Nativo
 
 Sitio web que adapta los dibujos realizados en Khan Academy a código estándar (HTML + CSS + JavaScript con p5.js).
 
