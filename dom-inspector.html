@@ -6,7 +6,6 @@
   <title>Inspector del DOM | Gráficos Khan</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Estilos específicos para el árbol del DOM */
     .dom-tree {
       display: flex;
       flex-direction: column;
@@ -91,7 +90,6 @@
       <h3>Jerarquía General del Proyecto (HTML Document Object Model)</h3>
       
       <div class="dom-tree">
-        <!-- Raíz -->
         <div class="dom-node">
           &lt;html&gt; lang="es"
           <span>Nodo Raíz del Documento</span>
@@ -99,10 +97,7 @@
         
         <div class="connector-line"></div>
 
-        <!-- Ramas principales: Head y Body -->
         <div class="dom-branch">
-          
-          <!-- Rama HEAD -->
           <div style="display: flex; flex-direction: column; align-items: center;">
             <div class="dom-node" style="border-color: #a0e7e5; color: #a0e7e5;">
               &lt;head&gt;
@@ -122,7 +117,6 @@
             </div>
           </div>
 
-          <!-- Rama BODY -->
           <div style="display: flex; flex-direction: column; align-items: center;">
             <div class="dom-node" style="border-color: #7ee8fa; color: #7ee8fa;">
               &lt;body&gt;
@@ -141,7 +135,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -155,9 +148,6 @@
       <pre><code>&lt;div class="sketch-container" id="sketch-holder"&gt;
   &lt;canvas id="defaultCanvas0" width="400" height="400" class="p5Canvas" style="width: 400px; height: 400px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;</code></pre>
-      <p>
-        Esto permite que el renderizado 2D operado por JavaScript conviva de manera fluida con la estructura semántica estándar del documento HTML5.
-      </p>
     </div>
   </main>
 
