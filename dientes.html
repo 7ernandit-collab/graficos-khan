@@ -28,11 +28,7 @@
   <main>
     <a href="index.html" class="btn-back">← Volver al inicio</a>
     <h1>🐰 Dientes de conejo</h1>
-    <p>
-      Adaptación del desafío <em>Bucktooth Bunny</em> de Khan Academy. 
-      Usamos variables para controlar el tamaño de los ojos y los dientes.
-    </p>
-
+    <p>Adaptación de tu dibujo de Khan Academy a código nativo con p5.js.</p>
     <div class="sketch-container" id="sketch-holder"></div>
   </main>
 
@@ -41,9 +37,6 @@
   </footer>
 
   <script>
-    let eyeSize = 28;
-    let toothHeight = 40;
-
     function setup() {
       let canvas = createCanvas(400, 400);
       canvas.parent('sketch-holder');
@@ -51,50 +44,24 @@
     }
 
     function draw() {
-      background(252, 224, 224);
+      background(255);
 
-      strokeWeight(5);
-      stroke(181, 153, 83);
-      fill(245, 139, 139);
-      ellipse(150, 70, 60, 120);
-      ellipse(240, 70, 60, 120);
+      var eyeSize = 40;
+      var toothLength = 20;
 
-      noStroke();
-      fill(255, 180, 180);
-      ellipse(150, 80, 30, 70);
-      ellipse(240, 80, 30, 70);
+      ellipse(150, 70, 60, 120);  // left ear
+      ellipse(240, 70, 60, 120);  // right ear
+      ellipse(200, 170, 150, 150); // face
 
-      stroke(181, 153, 83);
-      strokeWeight(5);
-      fill(245, 200, 150);
-      ellipse(200, 170, 150, 150);
+      fill(0, 0, 0);
+      ellipse(170, 150, eyeSize, eyeSize); // left eye
+      ellipse(230, 150, eyeSize, eyeSize); // right eye
 
-      noStroke();
-      fill(0);
-      ellipse(170, 150, eyeSize, eyeSize);
-      ellipse(230, 150, eyeSize, eyeSize);
+      line(150, 200, 250, 200); // mouth
 
-      fill(255);
-      ellipse(165, 145, 8, 8);
-      ellipse(225, 145, 8, 8);
-
-      fill(255, 100, 100);
-      ellipse(200, 175, 18, 12);
-
-      stroke(0);
-      strokeWeight(2);
-      line(150, 200, 250, 200);
-
-      fill(255);
-      stroke(0);
-      strokeWeight(1);
-      rect(185, 200, 15, toothHeight);
-      rect(200, 200, 15, toothHeight);
-
-      noStroke();
-      fill(255, 150, 150, 120);
-      ellipse(145, 180, 30, 20);
-      ellipse(255, 180, 30, 20);
+      noFill();
+      rect(185, 200, 15, toothLength); // left tooth
+      rect(200, 200, 15, toothLength); // right tooth
     }
   </script>
 </body>
