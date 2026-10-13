@@ -24,7 +24,7 @@ Sitio web que adapta los dibujos realizados en Khan Academy a código estándar 
 
 El sitio está publicado con **GitHub Pages** en:
 
-**https://7ernandit-collab.github.io/graficos-khan/**
+**https://github.com/7ernandit-collab/graficos-khan.git**
 
 ## Autor
 
