@@ -7,7 +7,6 @@ Sitio web que adapta los dibujos realizados en Khan Academy a código estándar 
 
 - **index.html** → Página principal con menú de navegación
 - **teoria.html** → Sección informativa sobre `<canvas>` y p5.js
-- **pluma.html** → Dibujo de una pluma
 - **dientes.html** → Dientes de conejo (Bucktooth Bunny)
 - **cena.html** → ¿Qué hay de cena? (What's for dinner?)
 - **nevado.html** → Día nevado soleado (Sunny Snowy Day)
