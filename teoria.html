@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teoría | Canvas y p5.js</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">🎨 Gráficos Khan</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="teoria.html" class="active">Teoría</a></li>
+          <li><a href="rana.html">Rana</a></li>
+          <li><a href="dientes.html">Dientes de conejo</a></li>
+          <li><a href="cena.html">¿Qué hay de cena?</a></li>
+          <li><a href="nevado.html">Día nevado</a></li>
+          <li><a href="muneco.html">Muñeco de nieve</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="index.html" class="btn-back">← Volver al inicio</a>
+
+    <h1>Sección Informativa</h1>
+    <p>Apuntes teóricos sobre las herramientas usadas para crear los gráficos.</p>
+
+    <h2>1. La etiqueta HTML &lt;canvas&gt; y el contexto 2D</h2>
+
+    <div class="theory-section">
+      <h3>¿Qué es &lt;canvas&gt;?</h3>
+      <p>
+        <code>&lt;canvas&gt;</code> es un elemento HTML5 que crea un área de dibujo 
+        (bitmap) en la página. Por sí solo no dibuja nada: necesitamos JavaScript 
+        para obtener un <strong>contexto de renderizado</strong> y pintar sobre él.
+      </p>
+
+      <h3>Crear un canvas</h3>
+      <pre><code>&lt;canvas id="miCanvas" width="400" height="400"&gt;&lt;/canvas&gt;</code></pre>
+
+      <h3>Obtener el contexto 2D</h3>
+      <pre><code>const canvas = document.getElementById("miCanvas");
+const ctx = canvas.getContext("2d");  // Contexto de renderizado 2D</code></pre>
+
+      <h3>Métodos principales del contexto 2D</h3>
+      <ul>
+        <li><code>fillRect(x, y, ancho, alto)</code> – rectángulo relleno</li>
+        <li><code>strokeRect(x, y, ancho, alto)</code> – rectángulo solo contorno</li>
+        <li><code>beginPath()</code> / <code>closePath()</code> – iniciar/cerrar un camino</li>
+        <li><code>moveTo(x, y)</code> / <code>lineTo(x, y)</code> – líneas</li>
+        <li><code>arc(x, y, radio, inicio, fin)</code> – arcos y círculos</li>
+        <li><code>fill()</code> / <code>stroke()</code> – rellenar o dibujar el contorno</li>
+        <li><code>fillStyle</code> / <code>strokeStyle</code> – color de relleno y de línea</li>
+        <li><code>clearRect(x, y, ancho, alto)</code> – borrar una zona</li>
+      </ul>
+
+      <h3>Ejemplo mínimo con canvas nativo</h3>
+      <pre><code>const canvas = document.getElementById("miCanvas");
+const ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "skyblue";
+ctx.fillRect(0, 0, 400, 400);
+
+ctx.fillStyle = "yellow";
+ctx.beginPath();
+ctx.arc(100, 80, 40, 0, Math.PI * 2);
+ctx.fill();</code></pre>
+
+      <p>
+        El sistema de coordenadas empieza en la esquina superior izquierda (0,0). 
+        El eje X crece hacia la derecha y el eje Y hacia abajo.
+      </p>
+    </div>
+
+    <h2>2. Fundamentos de la librería p5.js</h2>
+
+    <div class="theory-section">
+      <h3>¿Qué es p5.js?</h3>
+      <p>
+        <strong>p5.js</strong> es una librería de JavaScript creada para hacer 
+        más accesible la programación creativa (dibujo, animación e interacción). 
+        Es la evolución moderna de Processing.js, la misma tecnología que usa 
+        Khan Academy en sus retos de dibujo.
+      </p>
+
+      <h3>Cómo incluirla</h3>
+      <pre><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"&gt;&lt;/script&gt;</code></pre>
+
+      <h3>Estructura básica de un sketch</h3>
+      <pre><code>function setup() {
+  createCanvas(400, 400);
+  background(220);
+}
+
+function draw() {
+  // Este bloque se ejecuta muchas veces por segundo
+}</code></pre>
+
+      <h3>Funciones de dibujo más usadas</h3>
+      <ul>
+        <li><code>ellipse(x, y, ancho, alto)</code> – elipse o círculo</li>
+        <li><code>rect(x, y, ancho, alto)</code> – rectángulo</li>
+        <li><code>triangle(x1,y1, x2,y2, x3,y3)</code> – triángulo</li>
+        <li><code>line(x1, y1, x2, y2)</code> – línea</li>
+        <li><code>arc(x, y, ancho, alto, inicio, fin)</code> – arco</li>
+        <li><code>fill(r, g, b)</code> / <code>stroke(r, g, b)</code> – color</li>
+        <li><code>noFill()</code> / <code>noStroke()</code> – sin relleno o sin contorno</li>
+        <li><code>background(r, g, b)</code> – color de fondo</li>
+      </ul>
+
+      <h3>Ventajas de p5.js frente al canvas nativo</h3>
+      <ul>
+        <li>Sintaxis mucho más simple y cercana a Processing (la de Khan Academy).</li>
+        <li>Maneja automáticamente el bucle de animación con <code>draw()</code>.</li>
+        <li>Ideal para dibujos, animaciones e interacciones creativas.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Actividad: Despliegue de gráficos · Teoría de Canvas y p5.js</p>
+  </footer>
+</body>
+</html>
