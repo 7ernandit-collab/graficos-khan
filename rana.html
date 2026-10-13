@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rana | Gráficos Khan</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">🎨 Gráficos Khan</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="teoria.html">Teoría</a></li>
+          <li><a href="rana.html" class="active">Rana</a></li>
+          <li><a href="dientes.html">Dientes de conejo</a></li>
+          <li><a href="cena.html">¿Qué hay de cena?</a></li>
+          <li><a href="nevado.html">Día nevado</a></li>
+          <li><a href="muneco.html">Muñeco de nieve</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="index.html" class="btn-back">← Volver al inicio</a>
+    <h1>🐸 Rana</h1>
+    <p>
+      Dibujo de una rana creado con formas básicas (elipses, arcos y triángulos) 
+      adaptado a código nativo con p5.js.
+    </p>
+
+    <div class="sketch-container" id="sketch-holder"></div>
+  </main>
+
+  <footer>
+    <p>Adaptación de proyecto Khan Academy · Código nativo con p5.js</p>
+  </footer>
+
+  <script>
+    function setup() {
+      let canvas = createCanvas(400, 400);
+      canvas.parent('sketch-holder');
+      noLoop();
+    }
+
+    function draw() {
+      // Fondo
+      background(135, 206, 235);
+
+      // Césped
+      noStroke();
+      fill(60, 160, 50);
+      rect(0, 320, 400, 80);
+      // hierba
+      for (let i = 0; i < 40; i++) {
+        let x = i * 10 + 5;
+        stroke(40, 130, 30);
+        strokeWeight(2);
+        line(x, 320, x + random(-3, 3), 300 + random(-10, 5));
+      }
+      noStroke();
+
+      // ===== CUERPO DE LA RANA =====
+      fill(70, 160, 50);
+      ellipse(200, 250, 160, 120); // cuerpo
+      ellipse(200, 160, 130, 100); // cabeza
+
+      // Barriga más clara
+      fill(160, 220, 100);
+      ellipse(200, 260, 100, 70);
+      ellipse(200, 175, 80, 55);
+
+      // ===== OJOS =====
+      fill(70, 160, 50);
+      ellipse(160, 120, 50, 50);
+      ellipse(240, 120, 50, 50);
+
+      fill(255);
+      ellipse(160, 115, 35, 35);
+      ellipse(240, 115, 35, 35);
+
+      fill(20);
+      ellipse(160, 115, 18, 18);
+      ellipse(240, 115, 18, 18);
+
+      fill(255);
+      ellipse(155, 110, 7, 7);
+      ellipse(235, 110, 7, 7);
+
+      // ===== NARIZ =====
+      fill(40, 100, 30);
+      ellipse(190, 160, 8, 6);
+      ellipse(210, 160, 8, 6);
+
+      // ===== BOCA =====
+      noFill();
+      stroke(40, 100, 30);
+      strokeWeight(3);
+      arc(200, 180, 60, 30, 0, PI);
+
+      // ===== PATAS DELANTERAS =====
+      noStroke();
+      fill(70, 160, 50);
+      ellipse(130, 280, 40, 25);
+      ellipse(110, 295, 35, 20);
+      ellipse(95, 300, 12, 10);
+      ellipse(105, 305, 12, 10);
+      ellipse(115, 300, 12, 10);
+
+      ellipse(270, 280, 40, 25);
+      ellipse(290, 295, 35, 20);
+      ellipse(280, 300, 12, 10);
+      ellipse(290, 305, 12, 10);
+      ellipse(300, 300, 12, 10);
+
+      // ===== PATAS TRASERAS =====
+      fill(60, 140, 40);
+      ellipse(120, 310, 55, 30);
+      ellipse(90, 325, 40, 22);
+      ellipse(75, 330, 14, 12);
+      ellipse(85, 335, 14, 12);
+      ellipse(95, 330, 14, 12);
+
+      ellipse(280, 310, 55, 30);
+      ellipse(310, 325, 40, 22);
+      ellipse(300, 330, 14, 12);
+      ellipse(310, 335, 14, 12);
+      ellipse(320, 330, 14, 12);
+
+      // Manchas
+      fill(50, 120, 35, 150);
+      ellipse(160, 230, 25, 18);
+      ellipse(240, 240, 20, 15);
+      ellipse(180, 280, 18, 12);
+    }
+  </script>
+</body>
+</html>
