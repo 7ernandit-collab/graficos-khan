@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dientes de conejo | Gráficos Khan</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">🎨 Gráficos Khan</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="teoria.html">Teoría</a></li>
+          <li><a href="rana.html">Rana</a></li>
+          <li><a href="dientes.html" class="active">Dientes de conejo</a></li>
+          <li><a href="cena.html">¿Qué hay de cena?</a></li>
+          <li><a href="nevado.html">Día nevado</a></li>
+          <li><a href="muneco.html">Muñeco de nieve</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="index.html" class="btn-back">← Volver al inicio</a>
+    <h1>🐰 Dientes de conejo</h1>
+    <p>
+      Adaptación del desafío <em>Bucktooth Bunny</em> de Khan Academy. 
+      Usamos variables para controlar el tamaño de los ojos y los dientes.
+    </p>
+
+    <div class="sketch-container" id="sketch-holder"></div>
+  </main>
+
+  <footer>
+    <p>Adaptación de proyecto Khan Academy · Código nativo con p5.js</p>
+  </footer>
+
+  <script>
+    let eyeSize = 28;
+    let toothHeight = 40;
+
+    function setup() {
+      let canvas = createCanvas(400, 400);
+      canvas.parent('sketch-holder');
+      noLoop();
+    }
+
+    function draw() {
+      background(252, 224, 224);
+
+      strokeWeight(5);
+      stroke(181, 153, 83);
+      fill(245, 139, 139);
+      ellipse(150, 70, 60, 120);
+      ellipse(240, 70, 60, 120);
+
+      noStroke();
+      fill(255, 180, 180);
+      ellipse(150, 80, 30, 70);
+      ellipse(240, 80, 30, 70);
+
+      stroke(181, 153, 83);
+      strokeWeight(5);
+      fill(245, 200, 150);
+      ellipse(200, 170, 150, 150);
+
+      noStroke();
+      fill(0);
+      ellipse(170, 150, eyeSize, eyeSize);
+      ellipse(230, 150, eyeSize, eyeSize);
+
+      fill(255);
+      ellipse(165, 145, 8, 8);
+      ellipse(225, 145, 8, 8);
+
+      fill(255, 100, 100);
+      ellipse(200, 175, 18, 12);
+
+      stroke(0);
+      strokeWeight(2);
+      line(150, 200, 250, 200);
+
+      fill(255);
+      stroke(0);
+      strokeWeight(1);
+      rect(185, 200, 15, toothHeight);
+      rect(200, 200, 15, toothHeight);
+
+      noStroke();
+      fill(255, 150, 150, 120);
+      ellipse(145, 180, 30, 20);
+      ellipse(255, 180, 30, 20);
+    }
+  </script>
+</body>
+</html>
