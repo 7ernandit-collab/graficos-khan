@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Qué hay de cena? | Gráficos Khan</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">🎨 Gráficos Khan</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="teoria.html">Teoría</a></li>
+          <li><a href="rana.html">Rana</a></li>
+          <li><a href="dientes.html">Dientes de conejo</a></li>
+          <li><a href="cena.html" class="active">¿Qué hay de cena?</a></li>
+          <li><a href="nevado.html">Día nevado</a></li>
+          <li><a href="muneco.html">Muñeco de nieve</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="index.html" class="btn-back">← Volver al inicio</a>
+    <h1>🍽️ ¿Qué hay de cena?</h1>
+    <p>
+      Adaptación del proyecto <em>What's for dinner?</em> de Khan Academy. 
+      Plato con comida dibujada usando formas básicas.
+    </p>
+
+    <div class="sketch-container" id="sketch-holder"></div>
+  </main>
+
+  <footer>
+    <p>Adaptación de proyecto Khan Academy · Código nativo con p5.js</p>
+  </footer>
+
+  <script>
+    function setup() {
+      let canvas = createCanvas(400, 400);
+      canvas.parent('sketch-holder');
+      noLoop();
+    }
+
+    function draw() {
+      background(120, 70, 40);
+      fill(90, 50, 25);
+      rect(0, 0, 400, 400);
+
+      stroke(70, 40, 20, 80);
+      strokeWeight(1);
+      for (let i = 0; i < 20; i++) {
+        line(0, i * 20, 400, i * 20 + 10);
+      }
+
+      noStroke();
+      fill(70, 130, 180);
+      ellipse(200, 200, 280, 280);
+      fill(100, 160, 210);
+      ellipse(200, 200, 240, 240);
+      fill(180, 210, 240);
+      ellipse(200, 200, 180, 180);
+
+      // Manzana
+      fill(200, 40, 40);
+      ellipse(150, 160, 55, 50);
+      fill(255, 120, 120, 150);
+      ellipse(140, 150, 15, 12);
+      stroke(80, 50, 20);
+      strokeWeight(3);
+      line(150, 135, 155, 125);
+      noStroke();
+      fill(40, 140, 40);
+      ellipse(162, 128, 18, 10);
+
+      // Pan
+      fill(210, 160, 80);
+      rect(200, 140, 70, 35, 5);
+      fill(180, 120, 50);
+      rect(200, 140, 70, 8, 5);
+      stroke(160, 100, 40);
+      strokeWeight(1);
+      line(215, 155, 255, 155);
+      line(215, 165, 255, 165);
+      noStroke();
+
+      // Queso
+      fill(255, 210, 50);
+      triangle(120, 230, 170, 200, 175, 250);
+      fill(230, 180, 30);
+      ellipse(145, 220, 12, 10);
+      ellipse(155, 235, 8, 8);
+
+      // Tomates
+      fill(220, 50, 40);
+      ellipse(240, 230, 28, 28);
+      ellipse(270, 215, 24, 24);
+      ellipse(255, 250, 26, 26);
+      fill(255, 150, 150, 160);
+      ellipse(235, 225, 8, 6);
+      ellipse(265, 210, 7, 5);
+      ellipse(250, 245, 7, 5);
+
+      // Lechuga
+      fill(60, 160, 50);
+      ellipse(190, 260, 50, 25);
+      ellipse(210, 270, 45, 20);
+      fill(80, 180, 70);
+      ellipse(200, 255, 30, 15);
+    }
+  </script>
+</body>
+</html>
