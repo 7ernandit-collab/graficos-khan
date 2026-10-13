@@ -28,10 +28,7 @@
   <main>
     <a href="index.html" class="btn-back">← Volver al inicio</a>
     <h1>☀️ Día nevado soleado</h1>
-    <p>
-      Adaptación del desafío <em>Sunny Snowy Day</em> de Khan Academy.
-    </p>
-
+    <p>Adaptación de tu dibujo de Khan Academy a código nativo con p5.js.</p>
     <div class="sketch-container" id="sketch-holder"></div>
   </main>
 
@@ -47,73 +44,21 @@
     }
 
     function draw() {
-      background(135, 206, 250);
+      background(0, 200, 255);
 
-      noStroke();
-      fill(255, 220, 50);
-      ellipse(80, 70, 90, 90);
-      stroke(255, 220, 50);
-      strokeWeight(3);
-      for (let a = 0; a < TWO_PI; a += PI / 6) {
-        let x1 = 80 + cos(a) * 50;
-        let y1 = 70 + sin(a) * 50;
-        let x2 = 80 + cos(a) * 70;
-        let y2 = 70 + sin(a) * 70;
-        line(x1, y1, x2, y2);
-      }
-      noStroke();
-
-      fill(255, 255, 255, 200);
-      ellipse(280, 60, 70, 40);
-      ellipse(310, 55, 50, 35);
-      ellipse(250, 65, 45, 30);
-
-      fill(250, 250, 255);
+      // The ground
+      fill(0, 255, 0);
       rect(0, 300, 400, 100);
 
-      fill(200, 210, 230, 100);
-      ellipse(200, 340, 160, 30);
+      // The sun
+      fill(255, 255, 0);
+      ellipse(80, 64, 100, 100);
 
-      fill(255);
-      stroke(200);
-      strokeWeight(1);
-      ellipse(200, 300, 140, 140);
-      ellipse(200, 210, 100, 100);
-      ellipse(200, 130, 70, 70);
-
-      noStroke();
-      fill(30);
-      ellipse(185, 120, 12, 12);
-      ellipse(215, 120, 12, 12);
-
-      fill(255, 140, 0);
-      triangle(200, 130, 200, 145, 170, 138);
-
-      fill(30);
-      ellipse(185, 150, 6, 6);
-      ellipse(195, 155, 6, 6);
-      ellipse(205, 155, 6, 6);
-      ellipse(215, 150, 6, 6);
-
-      fill(20);
-      ellipse(200, 195, 14, 14);
-      ellipse(200, 225, 14, 14);
-      ellipse(200, 255, 14, 14);
-
-      stroke(100, 60, 30);
-      strokeWeight(4);
-      line(155, 200, 90, 160);
-      line(245, 200, 310, 160);
-      line(90, 160, 75, 150);
-      line(90, 160, 80, 145);
-      line(310, 160, 325, 150);
-      line(310, 160, 320, 145);
-
-      noStroke();
-      fill(255);
-      for (let i = 0; i < 30; i++) {
-        ellipse(random(400), random(280), random(2, 5), random(2, 5));
-      }
+      fill(255, 255, 255);
+      // The snowman
+      ellipse(200, 300, 150, 150);
+      ellipse(200, 200, 100, 100);
+      ellipse(200, 120, 75, 75);
     }
   </script>
 </body>
