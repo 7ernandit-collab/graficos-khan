@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muñeco de nieve | Gráficos Khan</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">🎨 Gráficos Khan</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="teoria.html">Teoría</a></li>
+          <li><a href="rana.html">Rana</a></li>
+          <li><a href="dientes.html">Dientes de conejo</a></li>
+          <li><a href="cena.html">¿Qué hay de cena?</a></li>
+          <li><a href="nevado.html">Día nevado</a></li>
+          <li><a href="muneco.html" class="active">Muñeco de nieve</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="index.html" class="btn-back">← Volver al inicio</a>
+    <h1>⛄ Muñeco de nieve</h1>
+    <p>Adaptación de tu dibujo de Khan Academy a código nativo con p5.js.</p>
+    <div class="sketch-container" id="sketch-holder"></div>
+  </main>
+
+  <footer>
+    <p>Adaptación de proyecto Khan Academy · Código nativo con p5.js</p>
+  </footer>
+
+  <script>
+    function setup() {
+      let canvas = createCanvas(400, 400);
+      canvas.parent('sketch-holder');
+      noLoop();
+    }
+
+    function draw() {
+      background(255);
+
+      ellipse(200, 300, 150, 150);
+      ellipse(200, 200, 100, 100);
+      ellipse(200, 130, 60, 60);
+    }
+  </script>
+</body>
+</html>
