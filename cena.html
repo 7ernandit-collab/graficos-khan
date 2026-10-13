@@ -28,11 +28,7 @@
   <main>
     <a href="index.html" class="btn-back">← Volver al inicio</a>
     <h1>🍽️ ¿Qué hay de cena?</h1>
-    <p>
-      Adaptación del proyecto <em>What's for dinner?</em> de Khan Academy. 
-      Plato con comida dibujada usando formas básicas.
-    </p>
-
+    <p>Adaptación de tu dibujo de Khan Academy a código nativo con p5.js.</p>
     <div class="sketch-container" id="sketch-holder"></div>
   </main>
 
@@ -48,70 +44,27 @@
     }
 
     function draw() {
-      background(120, 70, 40);
-      fill(90, 50, 25);
-      rect(0, 0, 400, 400);
+      background(186, 145, 20); // wooden table
+      ellipse(200, 200, 350, 350); // plate
+      ellipse(200, 200, 300, 300);
 
-      stroke(70, 40, 20, 80);
-      strokeWeight(1);
-      for (let i = 0; i < 20; i++) {
-        line(0, i * 20, 400, i * 20 + 10);
-      }
+      // Huevo estrellado
+      fill(255, 255, 255); // clara
+      ellipse(160, 180, 80, 80);
+      fill(255, 200, 0); // yema
+      ellipse(160, 180, 35, 35);
 
-      noStroke();
-      fill(70, 130, 180);
-      ellipse(200, 200, 280, 280);
-      fill(100, 160, 210);
-      ellipse(200, 200, 240, 240);
-      fill(180, 210, 240);
-      ellipse(200, 200, 180, 180);
+      // Trozo de carne
+      fill(120, 60, 20);
+      rect(210, 150, 90, 60, 10);
 
-      // Manzana
-      fill(200, 40, 40);
-      ellipse(150, 160, 55, 50);
-      fill(255, 120, 120, 150);
-      ellipse(140, 150, 15, 12);
-      stroke(80, 50, 20);
-      strokeWeight(3);
-      line(150, 135, 155, 125);
-      noStroke();
-      fill(40, 140, 40);
-      ellipse(162, 128, 18, 10);
-
-      // Pan
-      fill(210, 160, 80);
-      rect(200, 140, 70, 35, 5);
-      fill(180, 120, 50);
-      rect(200, 140, 70, 8, 5);
-      stroke(160, 100, 40);
-      strokeWeight(1);
-      line(215, 155, 255, 155);
-      line(215, 165, 255, 165);
-      noStroke();
-
-      // Queso
-      fill(255, 210, 50);
-      triangle(120, 230, 170, 200, 175, 250);
-      fill(230, 180, 30);
-      ellipse(145, 220, 12, 10);
-      ellipse(155, 235, 8, 8);
-
-      // Tomates
-      fill(220, 50, 40);
-      ellipse(240, 230, 28, 28);
-      ellipse(270, 215, 24, 24);
-      ellipse(255, 250, 26, 26);
-      fill(255, 150, 150, 160);
-      ellipse(235, 225, 8, 6);
-      ellipse(265, 210, 7, 5);
-      ellipse(250, 245, 7, 5);
-
-      // Lechuga
-      fill(60, 160, 50);
-      ellipse(190, 260, 50, 25);
-      ellipse(210, 270, 45, 20);
-      fill(80, 180, 70);
-      ellipse(200, 255, 30, 15);
+      // Guarnición de verduras (chícharos)
+      fill(50, 180, 50);
+      ellipse(180, 240, 20, 20);
+      ellipse(200, 245, 18, 18);
+      ellipse(190, 260, 22, 22);
+      ellipse(200, 275, 19, 19);
+      ellipse(170, 270, 20, 20);
     }
   </script>
 </body>
