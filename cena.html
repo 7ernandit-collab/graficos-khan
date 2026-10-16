@@ -15,12 +15,15 @@
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="teoria.html">Teoría</a></li>
-          <li><a href="dom-inspector.html">Inspector DOM</a></li>
           <li><a href="rana.html">Rana</a></li>
           <li><a href="dientes.html">Dientes de conejo</a></li>
           <li><a href="cena.html" class="active">¿Qué hay de cena?</a></li>
           <li><a href="nevado.html">Día nevado</a></li>
           <li><a href="muneco.html">Muñeco de nieve</a></li>
+          <li><a href="sol_explota.html">Sol que explota</a></li>
+          <li><a href="nubes.html">Nubes</a></li>
+          <li><a href="estrella_fugaz.html">Estrella fugaz</a></li>
+          <li><a href="dom-inspector.html">Inspector DOM</a></li>
         </ul>
       </nav>
     </div>
@@ -45,21 +48,18 @@
     }
 
     function draw() {
-      background(186, 145, 20); // wooden table
-      ellipse(200, 200, 350, 350); // plate
+      background(186, 145, 20); 
+      ellipse(200, 200, 350, 350); 
       ellipse(200, 200, 300, 300);
 
-      // Huevo estrellado
-      fill(255, 255, 255); // clara
+      fill(255, 255, 255); 
       ellipse(160, 180, 80, 80);
-      fill(255, 200, 0); // yema
+      fill(255, 200, 0); 
       ellipse(160, 180, 35, 35);
 
-      // Trozo de carne
       fill(120, 60, 20);
       rect(210, 150, 90, 60, 10);
 
-      // Guarnición de verduras (chícharos)
       fill(50, 180, 50);
       ellipse(180, 240, 20, 20);
       ellipse(200, 245, 18, 18);
