@@ -10,7 +10,12 @@ Sitio web que adapta los dibujos realizados en Khan Academy a código estándar 
 - **dientes.html** → Dientes de conejo (Bucktooth Bunny)
 - **cena.html** → ¿Qué hay de cena? (What's for dinner?)
 - **nevado.html** → Día nevado soleado (Sunny Snowy Day)
+- **rana.html** → Rana Loca (Crazy Frog)
 - **muneco.html** → Muñeco de nieve (Super Snowman)
+- **sol_explota.html** → Sol que explota (Animación adaptada de Khan Academy)
+- **nubes.html** → Nubes (Paisaje animado adaptado de Khan Academy)
+- **estrella_fugaz.html** → Estrella fugaz (Animación espacial adaptada de Khan Academy)
+- **dom-inspector.html** → Inspector del DOM y estructura de elementos
 - **styles.css** → Estilos del sitio
 
 ## Tecnologías usadas
