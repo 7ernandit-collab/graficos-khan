@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrella fugaz | Gráficos Khan</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">🎨 Gráficos Khan</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="teoria.html">Teoría</a></li>
+          <li><a href="rana.html">Rana</a></li>
+          <li><a href="dientes.html">Dientes de conejo</a></li>
+          <li><a href="cena.html">¿Qué hay de cena?</a></li>
+          <li><a href="nevado.html">Día nevado</a></li>
+          <li><a href="muneco.html">Muñeco de nieve</a></li>
+          <li><a href="sol_explota.html">Sol que explota</a></li>
+          <li><a href="nubes.html">Nubes</a></li>
+          <li><a href="estrella_fugaz.html" class="active">Estrella fugaz</a></li>
+          <li><a href="dom-inspector.html">Inspector DOM</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="index.html" class="btn-back">← Volver al inicio</a>
+    <h1>🌠 Estrella fugaz</h1>
+    <p>Adaptación de tu animación espacial de Khan Academy a código nativo con p5.js[cite: 3].</p>
+    <div class="sketch-container" id="sketch-holder"></div>
+  </main>
+
+  <footer>
+    <p>Adaptación de proyecto Khan Academy · Código nativo con p5.js</p>
+  </footer>
+
+  <script>
+    var xPos = 0;
+    var yPos = 0;
+    var xPos2 = 400;
+
+    function setup() {
+      let canvas = createCanvas(400, 400);
+      canvas.parent('sketch-holder');
+    }
+
+    function draw() {
+      background(29, 40, 115);
+      
+      // Mover la primera estrella hacia la derecha y abajo[cite: 3]
+      xPos += 3;
+      yPos += 3;
+      
+      // Mover la segunda estrella hacia la izquierda / abajo[cite: 3]
+      yPos += 2;
+      
+      // Dibuja la estrella fugaz (amarilla)[cite: 3]
+      fill(255, 242, 0);
+      ellipse(xPos, yPos, 10, 10);
+      
+      // Dibuja la estrella fugaz (blanca)[cite: 3]
+      fill(255, 255, 255);
+      ellipse(xPos, 100, 14, 14);
+    }
+  </script>
+</body>
+</html>
