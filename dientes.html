@@ -8,19 +8,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 </head>
 <body>
-  <header> 
+  <header>
     <div class="nav-container">
       <a href="index.html" class="logo">🎨 Gráficos Khan</a>
       <nav>
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="teoria.html">Teoría</a></li>
-          <li><a href="dom-inspector.html">Inspector DOM</a></li>
           <li><a href="rana.html">Rana</a></li>
           <li><a href="dientes.html" class="active">Dientes de conejo</a></li>
           <li><a href="cena.html">¿Qué hay de cena?</a></li>
           <li><a href="nevado.html">Día nevado</a></li>
           <li><a href="muneco.html">Muñeco de nieve</a></li>
+          <li><a href="sol_explota.html">Sol que explota</a></li>
+          <li><a href="nubes.html">Nubes</a></li>
+          <li><a href="estrella_fugaz.html">Estrella fugaz</a></li>
+          <li><a href="dom-inspector.html">Inspector DOM</a></li>
         </ul>
       </nav>
     </div>
@@ -50,19 +53,19 @@
       var eyeSize = 40;
       var toothLength = 20;
 
-      ellipse(150, 70, 60, 120);  // left ear
-      ellipse(240, 70, 60, 120);  // right ear
-      ellipse(200, 170, 150, 150); // face
+      ellipse(150, 70, 60, 120);  
+      ellipse(240, 70, 60, 120);  
+      ellipse(200, 170, 150, 150); 
 
       fill(0, 0, 0);
-      ellipse(170, 150, eyeSize, eyeSize); // left eye
-      ellipse(230, 150, eyeSize, eyeSize); // right eye
+      ellipse(170, 150, eyeSize, eyeSize); 
+      ellipse(230, 150, eyeSize, eyeSize); 
 
-      line(150, 200, 250, 200); // mouth
+      line(150, 200, 250, 200); 
 
       noFill();
-      rect(185, 200, 15, toothLength); // left tooth
-      rect(200, 200, 15, toothLength); // right tooth
+      rect(185, 200, 15, toothLength); 
+      rect(200, 200, 15, toothLength); 
     }
   </script>
 </body>
