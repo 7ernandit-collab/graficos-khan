@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sol que explota | Gráficos Khan</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">🎨 Gráficos Khan</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="teoria.html">Teoría</a></li>
+          <li><a href="rana.html">Rana</a></li>
+          <li><a href="dientes.html">Dientes de conejo</a></li>
+          <li><a href="cena.html">¿Qué hay de cena?</a></li>
+          <li><a href="nevado.html">Día nevado</a></li>
+          <li><a href="muneco.html">Muñeco de nieve</a></li>
+          <li><a href="sol_explota.html" class="active">Sol que explota</a></li>
+          <li><a href="nubes.html">Nubes</a></li>
+          <li><a href="estrella_fugaz.html">Estrella fugaz</a></li>
+          <li><a href="dom-inspector.html">Inspector DOM</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="index.html" class="btn-back">← Volver al inicio</a>
+    <h1>☀️ Sol que explota</h1>
+    <p>Adaptación de tu animación de Khan Academy a código nativo con p5.js[cite: 1].</p>
+    <div class="sketch-container" id="sketch-holder"></div>
+  </main>
+
+  <footer>
+    <p>Adaptación de proyecto Khan Academy · Código nativo con p5.js</p>
+  </footer>
+
+  <script>
+    var sunSize = 30; 
+
+    function setup() {
+      let canvas = createCanvas(400, 400);
+      canvas.parent('sketch-holder');
+    }
+
+    function draw() {
+      noStroke();
+      // El hermoso cielo azul
+      background(82, 222, 240);
+
+      // Crecimiento continuo del sol por fotograma
+      sunSize = sunSize + 1;
+
+      // El sol, un pequeño círculo en el horizonte
+      fill(255, 204, 0);
+      ellipse(200, 298, sunSize, sunSize);
+
+      // La tierra, bloqueando la mitad del sol
+      fill(76, 168, 67);
+      rect(0, 300, 400, 100);
+    }
+  </script>
+</body>
+</html>
